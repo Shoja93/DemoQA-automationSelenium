@@ -32,7 +32,6 @@ public class BookStoreTest extends LogInTest {
     public void addBook3() throws InterruptedException {
         addBook2();
         bookStore.getBackToBookStore();
-        bookStore.scroll();
         bookStore.addBook("Programming JavaScript Applications");
         Thread.sleep(5000);
         bookStore.getAddToCollection();
