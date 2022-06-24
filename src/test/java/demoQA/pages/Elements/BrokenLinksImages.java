@@ -1,6 +1,5 @@
 package demoQA.pages.Elements;
 
-import demoQA.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

@@ -85,10 +85,10 @@ public class PracticeForm {
         driver.findElement(day).click();
     }
 
-    public void getSubject() {
+    public void getSubject(String s) {
         scroll();
         WebElement subjects = driver.findElement(subject);
-        subjects.sendKeys("e");
+        subjects.sendKeys(s);
         subjects.sendKeys(Keys.ENTER);
     }
 
@@ -104,16 +104,16 @@ public class PracticeForm {
         driver.findElement(currentAddrress).sendKeys("Bulevar Oslobodjenja");
     }
 
-    public void getState(){
+    public void getState(String s){
         scroll();
         WebElement state = driver.findElement(selectState);
-        state.sendKeys("Haryana");
+        state.sendKeys(s);
         state.sendKeys(Keys.ENTER);
     }
 
-    public void getCity(){
+    public void getCity(String s){
         WebElement city = driver.findElement(selectCity);
-        city.sendKeys("Karnal");
+        city.sendKeys(s);
         city.sendKeys(Keys.ENTER);
     }
 

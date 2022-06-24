@@ -20,12 +20,12 @@ public class PracticeFormTest extends BaseTest {
         practiceForm.getMonth();
         practiceForm.getYear();
         practiceForm.getDay();
-        practiceForm.getSubject();
+        practiceForm.getSubject("eng");
         practiceForm.getHoobies();
         practiceForm.getPictures();
         practiceForm.getCurrentAddrress();
-        practiceForm.getState();
-        practiceForm.getCity();
+        practiceForm.getState("Haryana");
+        practiceForm.getCity("Karnal");
         practiceForm.getSubmitButton();
         Assert.assertEquals(driver.findElement(By.id("example-modal-sizes-title-lg")).getText(),"Thanks for submitting the form");
         Assert.assertTrue(driver.findElement(By.className("modal-body")).isDisplayed());
