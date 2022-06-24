@@ -26,6 +26,7 @@ public class BookStore {
     public void addBook(String text) throws InterruptedException {
         Thread.sleep(2000);
         List<WebElement> list = getAllBooks();
+        scroll();
         driver.findElement(By.xpath("//a[text()='"+text+"']")).click();
     }
 
@@ -41,6 +42,6 @@ public class BookStore {
 
     public void scroll(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,490)");
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
 }

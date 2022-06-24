@@ -3,6 +3,7 @@ package demoQA.base;
 import demoQA.pages.BookStoreApp.BookStore;
 import demoQA.pages.BookStoreApp.BookStoreApp;
 import demoQA.pages.BookStoreApp.LoginPage;
+import demoQA.pages.BookStoreApp.ProfilePage;
 import demoQA.pages.Elements.*;
 import demoQA.pages.Forms.Forms;
 import demoQA.pages.Forms.PracticeForm;
@@ -38,6 +39,7 @@ public class BasePage {
     public DinamicProperties dinamicProperties;
     public LoginPage loginPage;
     public BookStore bookStore;
+    public ProfilePage profilePage;
 
 
     @BeforeMethod
@@ -69,10 +71,11 @@ public class BasePage {
         dinamicProperties = new DinamicProperties(driver,wdw);
         loginPage = new LoginPage(driver);
         bookStore = new BookStore(driver);
+        profilePage = new ProfilePage(driver);
     }
 
     @AfterClass
     public void afterClass(){
-        //driver.quit();
+        driver.quit();
     }
 }
